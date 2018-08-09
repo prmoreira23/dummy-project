@@ -2,12 +2,62 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https:<span>//</span>fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- favicon -->
     <title>Dummy Project</title>
   </head>
-  <body>
-    Dummy Project
-    <form class="" action="index_modern.html" method="post">
-      <input type="submit">
-    </form>
+  <body class="initial">
+    <script type="text/javascript">
+
+      function initial(){
+        document.body.innerHTML = `
+          <h2 class="logo">DUMMY PROJECT</h2>
+          <a class="click-here" onclick="projects()"><strong> &ltCLICK /&gt</strong> </a>
+        `
+      }
+
+      function projects(){
+        document.body.innerHTML = `
+          <h2 class='logo'>DUMMY PROJECT</h2>
+          <a class="click-here" onclick="initial()"><strong> &ltBACK /&gt</strong> </a>
+          <div class='div-contact'></div>
+          <ul class='project-container'>
+            <li class='contact' onclick="contact()">CONTACT</li>
+            <li class='values'>VALUES <span>//</span> a list of stuff we agree on</li>
+            <li class='essays'>ESSAYS FOR CURIOUS FOLK <span >//</span> a free compiled reader of wisdom</li>
+            <li class='nome'>NOME <span>//</span> never forget names app</li>
+            <li class='thirds'>THIRDS <span>//</span> browser extension to help focus on three things</li>
+            <li class='pablo'>VON <span>//</span> a client, fixed there...</li>
+            <li class='steven'>STEVEN <span>//</span> a client, we fixed there...</li>
+            <li class='other'>OTHER <span>//</span> a client, we fixed there...</li>
+          </ul>
+        `;
+        paintSpans();
+        document.body.classList.replace("initial", "second");
+      }
+
+      function paintSpans(){
+        const spans = document.querySelectorAll("span");
+        const newColor = `rgb(${randomColor()},${randomColor()},${randomColor()})`;
+        console.log(newColor);
+        for(let span of spans){
+          span.style.color = newColor;
+        }
+      }
+
+      function randomColor(){
+        return Math.floor(Math.random() * 256);
+      }
+
+      function contact(){
+        const contact = document.querySelector('.div-contact')
+        contact.innerHTML = `Just two fools trying to be Bitcoin trillionaires`
+      }
+
+      document.addEventListener("DOMContentLoaded", initial);
+    </script>
   </body>
 </html>

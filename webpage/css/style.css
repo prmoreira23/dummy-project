@@ -1,35 +1,35 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
- body {
-   font-family: 'Roboto Condensed', sans-serif;
-   display: flex;
-   min-height: 100vh;
-   flex-direction: column;
-   background-color: 	#f6f4ea;
- }
-
- main {
-     flex: 1 0 auto;
-   }
-
-/* NAV STYLES */
-
-.light-blue.lighten-1 {
-  background-color: #f6f4ea !important;
-}
-nav ul a {
-  color: black !important;
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: 	#f4f5f7;
 }
 
-.icon-block {
-  padding: 0 15px;
+li {
+  font-family: 'typewriter', Arial, sans-serif;
 }
-.icon-block .material-icons {
-	font-size: inherit;
+
+.project-container {
+  margin-left: 80px;
+  margin-top: 35px;
+}
+
+.logo {
+    position: fixed;
+    bottom: 120px;
+    right: 120px;
+    font-size: 40px;
+}
+
+.click-here,  {
+  text-decoration: none;
+}
+
+.div-contact {
+    position: absolute;
+    top: 240px;
+    right: 120px;
+    font-size: 40px;
 }
